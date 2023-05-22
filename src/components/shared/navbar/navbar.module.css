@@ -42,3 +42,22 @@
     display: inline-block;
   }
 }
+
+@media (max-width: 450px) {
+  .wrapper {
+    flex-direction: column;
+    height: auto;
+  }
+  .wrapper ul{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+  }
+  .wrapper ul li{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    display: inline-block;
+  }
+
+}
