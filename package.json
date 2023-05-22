@@ -7,12 +7,11 @@
   "private": true,
   "scripts": {
     "build": "qwik build",
+    "build.all": "yarn run build && yarn run build.server",
     "build.client": "vite build",
     "build.preview": "vite build --ssr src/entry.preview.tsx",
     "build.server": "vite build -c adapters/express/vite.config.ts",
     "build.types": "tsc --incremental --noEmit",
-    "build.all": "yarn run build && yarn run build.server",
-
     "deploy": "echo 'Run \"npm run qwik add\" to install a server adapter'",
     "dev": "vite --mode ssr",
     "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
@@ -20,7 +19,7 @@
     "fmt.check": "prettier --check .",
     "lint": "eslint \"src/**/*.ts*\"",
     "preview": "qwik build preview && vite preview --open",
-    "serve": "ORIGIN=https://qwik-pokeapp-production.up.railway.app node server/entry.express",
+    "serve": "node server/entry.express",
     "start": "vite --open --mode ssr",
     "qwik": "qwik"
   },
